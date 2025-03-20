@@ -1,0 +1,103 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Critical Section Comment": {
+    "prefix": "critical",
+    "body": ["// CRITICAL: ⚠️ $1"],
+    "description": "Marks a critical section of code with warning emoji"
+  },
+  "Todo Comment": {
+    "prefix": "todo",
+    "body": ["// TODO: 📋 $1"],
+    "description": "Marks something that needs to be done"
+  },
+  "Fixme Comment": {
+    "prefix": "fixme",
+    "body": ["// FIXME: 🔧 $1"],
+    "description": "Marks something that needs to be fixed urgently"
+  },
+  "Bug Comment": {
+    "prefix": "bug",
+    "body": ["// BUG: 🐛 $1"],
+    "description": "Marks a known bug in the code"
+  },
+  "Hack Comment": {
+    "prefix": "hack",
+    "body": ["// HACK: ⚡ $1"],
+    "description": "Marks a hacky/non-ideal solution"
+  },
+  "Note Comment": {
+    "prefix": "note",
+    "body": ["// NOTE: 📝 $1"],
+    "description": "Adds an important note about the code"
+  },
+  "Info Comment": {
+    "prefix": "info",
+    "body": ["// INFO: ℹ️ $1"],
+    "description": "Provides general information about the code"
+  },
+  "Idea Comment": {
+    "prefix": "idea",
+    "body": ["// IDEA: 💡 $1"],
+    "description": "Suggests an idea for improvement"
+  },
+  "Explain Comment": {
+    "prefix": "explain",
+    "body": ["// EXPLAIN: 🔍 $1"],
+    "description": "Explains what/why something is done"
+  },
+  "Why Comment": {
+    "prefix": "why",
+    "body": ["// WHY: ❓ $1"],
+    "description": "Explains why a particular approach was chosen"
+  },
+  "Context Comment": {
+    "prefix": "context",
+    "body": ["// CONTEXT: 🌐 $1"],
+    "description": "Provides broader context about the code"
+  },
+  "Debug Comment": {
+    "prefix": "debug",
+    "body": ["// DEBUG: 🔬 $1"],
+    "description": "Adds a debug-related note"
+  },
+  "Review Comment": {
+    "prefix": "debug",
+    "body": ["// REVIEW: 📖 $1"],
+    "description": "Adds a debug-related note"
+  },
+  "Question Comment": {
+    "prefix": "debug",
+    "body": ["// QUESTION: ❓ $1"],
+    "description": "Adds a debug-related note"
+  },
+  "Optimize Comment": {
+    "prefix": "debug",
+    "body": ["// OPTIMIZE: 🚀 $1"],
+    "description": "Adds a debug-related note"
+  },
+  "Section Start Comment": {
+    "prefix": "sectionstart",
+    "body": ["// NOTE: 📌 section start here", "$1"],
+    "description": "Marks the start of a code section"
+  },
+  "Section End Comment": {
+    "prefix": "sectionend",
+    "body": ["// NOTE: 🏁 section end here"],
+    "description": "Marks the end of a code section"
+  }
+}
