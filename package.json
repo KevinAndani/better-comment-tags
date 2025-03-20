@@ -5,6 +5,9 @@
   "version": "0.0.1",
   "publisher": "KevinAndani",
   "license": "MIT",
+  "extensionDependencies": [
+    "aaron-bond.better-comments"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/KevinAndani/better-comment-tags.git"
