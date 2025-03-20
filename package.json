@@ -35,7 +35,8 @@
         "better-comment-tags.enabled": {
           "type": "boolean",
           "default": true,
-          "description": "Enable enhanced comment tags"
+          "description": "Enable enhanced comment tags",
+          "scope": "resource"
         }
       }
     },
