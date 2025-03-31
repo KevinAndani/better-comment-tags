@@ -1,0 +1,33 @@
+# Build output
+out
+dist
+*.vsix
+
+# Dependencies
+node_modules
+
+# Testing
+.vscode-test/
+coverage/
+
+# Environment
+.env
+.env.local
+
+# OS specific files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Optional - source maps (if you don't want to commit them)
+# *.js.map
+
+# Temporary files
+tmp/
+temp/
