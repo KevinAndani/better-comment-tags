@@ -1,0 +1,155 @@
+{
+  "Critical Section Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "critical",
+    "body": ["// CRITICAL: ⚠️ $1"],
+    "description": "Marks a critical section of code with warning emoji"
+  },
+
+  "Todo Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "todo",
+    "body": ["// TODO: 📋 $1"],
+    "description": "Marks something that needs to be done"
+  },
+
+  "Fixme Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "fixme",
+    "body": ["// FIXME: 🔧 $1"],
+    "description": "Marks something that needs to be fixed urgently"
+  },
+
+  "Bug Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "bug",
+    "body": ["// BUG: 🐛 $1"],
+    "description": "Marks a known bug in the code"
+  },
+
+  "Hack Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "hack",
+    "body": ["// HACK: ⚡ $1"],
+    "description": "Marks a hacky/non-ideal solution"
+  },
+
+  "Note Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "note",
+    "body": ["// NOTE: 📝 $1"],
+    "description": "Adds an important note about the code"
+  },
+
+  "Info Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "info",
+    "body": ["// INFO: ℹ️ $1"],
+    "description": "Provides general information about the code"
+  },
+
+  "Idea Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "idea",
+    "body": ["// IDEA: 💡 $1"],
+    "description": "Suggests an idea for improvement"
+  },
+
+  "Explanation Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "explanation",
+    "body": ["// EXPLANATION: 🔍 $1"],
+    "description": "Explains what/why something is done"
+  },
+
+  "Why Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "why",
+    "body": ["// WHY: 🤔 $1"],
+    "description": "Explains why a particular approach was chosen"
+  },
+
+  "WHAT THIS DO Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "what_this_do",
+    "body": ["// WHAT THIS DO: ⁉️ $1"],
+    "description": "Explains what a particular piece of code does"
+  },
+
+  "Context Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "context",
+    "body": ["// CONTEXT: 🌐 $1"],
+    "description": "Provides broader context about the code"
+  },
+
+  "Debug Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "debug",
+    "body": ["// DEBUG: 🔬 $1"],
+    "description": "Adds a debug-related note"
+  },
+
+  "Review Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "review",
+    "body": ["// REVIEW: 📖 $1"],
+    "description": "Marks code that needs review or attention"
+  },
+
+  "Optimize Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "optimize",
+    "body": ["// OPTIMIZE: 🚀 $1"],
+    "description": "Suggests code optimization opportunities"
+  },
+
+  "Section Start Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "section_start",
+    "body": ["// SECTION: 📂 $1 begin"],
+    "description": "Marks the beginning of a logical code section"
+  },
+
+  "Section End Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "section_end",
+    "body": ["// SECTION: 🔚 $1 end"],
+    "description": "Marks the end of a logical code section"
+  },
+
+  "Next Step Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "next_step",
+    "body": ["// NEXT STEP: ➡️ $1"],
+    "description": "Indicates the subsequent action or task in the workflow"
+  },
+
+  "Security Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "security",
+    "body": ["// SECURITY: 🔒 $1"],
+    "description": "Highlights security-sensitive code"
+  },
+
+  "Performance Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "performance",
+    "body": ["// PERFORMANCE: ⏱️ $1"],
+    "description": "Indicates performance-related code"
+  },
+
+  "Deprecated Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "deprecated",
+    "body": ["// DEPRECATED: ⛔ $1"],
+    "description": "Marks code that should no longer be used"
+  },
+
+  "API Comment": {
+    "scope": "javascript,typescript,c,cpp,csharp,java",
+    "prefix": "api",
+    "body": ["// API: 🔌 $1"],
+    "description": "Documents public interface contracts"
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "Critical Section Comment python": {
+    "scope": "python",
+    "prefix": "critical",
+    "body": ["# CRITICAL: ⚠️ $1"],
+    "description": "Marks a critical section of code with warning emoji"
+  },
+
+  "Todo Comment python": {
+    "scope": "python",
+    "prefix": "todo",
+    "body": ["# TODO: 📋 $1"],
+    "description": "Marks something that needs to be done"
+  },
+
+  "Fixme Comment python": {
+    "scope": "python",
+    "prefix": "fixme",
+    "body": ["# FIXME: 🔧 $1"],
+    "description": "Marks something that needs to be fixed urgently"
+  },
+
+  "Bug Comment python": {
+    "scope": "python",
+    "prefix": "bug",
+    "body": ["# BUG: 🐛 $1"],
+    "description": "Marks a known bug in the code"
+  },
+
+  "Hack Comment python": {
+    "scope": "python",
+    "prefix": "hack",
+    "body": ["# HACK: ⚡ $1"],
+    "description": "Marks a hacky/non-ideal solution"
+  },
+
+  "Note Comment python": {
+    "scope": "python",
+    "prefix": "note",
+    "body": ["# NOTE: 📝 $1"],
+    "description": "Adds an important note about the code"
+  },
+
+  "Info Comment python": {
+    "scope": "python",
+    "prefix": "info",
+    "body": ["# INFO: ℹ️ $1"],
+    "description": "Provides general information about the code"
+  },
+
+  "Idea Comment python": {
+    "scope": "python",
+    "prefix": "idea",
+    "body": ["# IDEA: 💡 $1"],
+    "description": "Suggests an idea for improvement"
+  },
+
+  "Explanation Comment python": {
+    "scope": "python",
+    "prefix": "explanation",
+    "body": ["# EXPLANATION: 🔍 $1"],
+    "description": "Explains what/why something is done"
+  },
+
+  "Why Comment python": {
+    "scope": "python",
+    "prefix": "why",
+    "body": ["# WHY: 🤔 $1"],
+    "description": "Explains why a particular approach was chosen"
+  },
+
+  "WHAT THIS DO Comment python": {
+    "scope": "python",
+    "prefix": "what_this_do",
+    "body": ["# WHAT THIS DO: ⁉️ $1"],
+    "description": "Explains what a particular piece of code does"
+  },
+
+  "Context Comment python": {
+    "scope": "python",
+    "prefix": "context",
+    "body": ["# CONTEXT: 🌐 $1"],
+    "description": "Provides broader context about the code"
+  },
+
+  "Debug Comment python": {
+    "scope": "python",
+    "prefix": "debug",
+    "body": ["# DEBUG: 🔬 $1"],
+    "description": "Adds a debug-related note"
+  },
+
+  "Review Comment python": {
+    "scope": "python",
+    "prefix": "review",
+    "body": ["# REVIEW: 📖 $1"],
+    "description": "Marks code that needs review or attention"
+  },
+
+  "Optimize Comment python": {
+    "scope": "python",
+    "prefix": "optimize",
+    "body": ["# OPTIMIZE: 🚀 $1"],
+    "description": "Suggests code optimization opportunities"
+  },
+
+  "Section Start Comment python": {
+    "scope": "python",
+    "prefix": "section_start",
+    "body": ["# SECTION: 📂 $1 begin"],
+    "description": "Marks the beginning of a logical code section"
+  },
+
+  "Section End Comment python": {
+    "scope": "python",
+    "prefix": "section_end",
+    "body": ["# SECTION: 🔚 $1 end"],
+    "description": "Marks the end of a logical code section"
+  },
+
+  "Next Step Comment python": {
+    "scope": "python",
+    "prefix": "next_step",
+    "body": ["# NEXT STEP: ➡️ $1"],
+    "description": "Indicates the subsequent action or task in the workflow"
+  },
+
+  "Security Comment python": {
+    "scope": "python",
+    "prefix": "security",
+    "body": ["# SECURITY: 🔒 $1"],
+    "description": "Highlights security-sensitive code"
+  },
+
+  "Performance Comment python": {
+    "scope": "python",
+    "prefix": "performance",
+    "body": ["# PERFORMANCE: ⏱️ $1"],
+    "description": "Indicates performance-related code"
+  },
+
+  "Deprecated Comment python": {
+    "scope": "python",
+    "prefix": "deprecated",
+    "body": ["# DEPRECATED: ⛔ $1"],
+    "description": "Marks code that should no longer be used"
+  },
+
+  "API Comment python": {
+    "scope": "python",
+    "prefix": "api",
+    "body": ["# API: 🔌 $1"],
+    "description": "Documents public interface contracts"
+  }
+}

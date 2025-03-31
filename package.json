@@ -1,0 +1,64 @@
+{
+  "name": "better-comments-enhanced-snippets",
+  "displayName": "Better Comments Enhanced Snippets",
+  "description": "Enhanced comment highlighting with emojis and more categories",
+  "version": "0.0.1",
+  "publisher": "KevinAndani",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinAndani/better-comment-tags.git"
+  },
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "categories": [
+    "Formatters",
+    "Snippets"
+  ],
+  "extensionDependencies": [
+    "aaron-bond.better-comments"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "better-comments-enhanced.applyStyles",
+        "title": "Apply Enhanced Comment Styles"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript,typescript,c,cpp,csharp,java",
+        "path": "./snippets/general.code-snippets"
+      },
+      {
+        "language": "python",
+        "path": "./snippets/python.code-snippets"
+      },
+      {
+        "language": "html,xml,svg",
+        "path": "./snippets/html.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4",
+    "vscode-test": "^1.6.1"
+  }
+}
