@@ -2,7 +2,7 @@
   "name": "better-comments-enhanced-snippets",
   "displayName": "Better Comments Enhanced Snippets",
   "description": "Enhanced comment highlighting with emojis and more categories",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "KevinAndani",
   "repository": {
     "type": "git",
@@ -53,13 +53,16 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "16.x",
+    "@types/vscode": "^1.85.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
     "typescript": "^5.0.4",
     "vscode-test": "^1.6.1"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.3.2"
   }
 }
