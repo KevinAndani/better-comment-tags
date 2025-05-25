@@ -108,6 +108,13 @@ const PREDEFINED_COMMENT_TAGS: CustomTag[] = [
     emoji: "⚠️",
   },
   {
+    tag: "ATTENTION:",
+    color: "#FFEB3B",
+    strikethrough: false,
+    backgroundColor: "#E7B95629",
+    emoji: "⚠️",
+  },
+  {
     tag: "REVIEW:",
     color: "#A5B4FC",
     strikethrough: false,
@@ -171,16 +178,16 @@ let activeDecorationTypes: Map<string, vscode.TextEditorDecorationType> =
 let decorationTimeout: NodeJS.Timeout | undefined = undefined;
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log("Better Comments Enhanced is now active");
-  console.log(
-    "Available commands:",
-    vscode.commands
-      .getCommands(true)
-      .then((commands) =>
-        commands.filter((cmd) => cmd.includes("better-comments"))
-      )
-      .then((commands) => console.log("Filtered commands:", commands))
-  );
+  console.log("Comment Chameleon is now active");
+  // console.log(
+  //   "Available commands:",
+  //   vscode.commands
+  //     .getCommands(true)
+  //     .then((commands) =>
+  //       commands.filter((cmd) => cmd.includes("comment-chameleon"))
+  //     )
+  //     .then((commands) => console.log("Filtered commands:", commands))
+  // );
 
   // Initial decoration of active editor
   if (vscode.window.activeTextEditor) {
@@ -192,7 +199,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Register command to manually apply styles
   const applyStylesCommand = vscode.commands.registerCommand(
-    "better-comments-enhanced.applyStyles",
+    "comment-chameleon.applyStyles",
     () => {
       clearAllDecorations(); // Clear old decoration types
       if (vscode.window.activeTextEditor) {
@@ -200,13 +207,13 @@ export function activate(context: vscode.ExtensionContext) {
       }
       updateCustomTagSnippets(context);
       vscode.window.showInformationMessage(
-        "Comment styles refreshed successfully!"
+        "Comment Chameleon styles refreshed successfully!"
       );
     }
   );
   // Register command to edit custom tags
   const editTagsCommand = vscode.commands.registerCommand(
-    "better-comments-enhanced.editTags",
+    "comment-chameleon.editTags",
     () => {
       TagEditorPanel.createOrShow(context.extensionUri);
     }
@@ -219,8 +226,8 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.workspace.onDidChangeConfiguration(
       (e: vscode.ConfigurationChangeEvent) => {
         if (
-          e.affectsConfiguration("betterCommentsEnhanced.customTags") ||
-          e.affectsConfiguration("betterCommentsEnhanced.useEmojis")
+          e.affectsConfiguration("commentChameleon.customTags") ||
+          e.affectsConfiguration("commentChameleon.useEmojis")
         ) {
           clearAllDecorations(); // Recreate decoration types on config change
           if (vscode.window.activeTextEditor) {
@@ -273,7 +280,7 @@ function triggerUpdateDecorations(
 }
 
 function getMergedTags(): CustomTag[] {
-  const config = vscode.workspace.getConfiguration("betterCommentsEnhanced");
+  const config = vscode.workspace.getConfiguration("commentChameleon");
   const rawCustomTags = config.get<CustomTag[]>("customTags");
   const customTags = Array.isArray(rawCustomTags) ? rawCustomTags : [];
   // Give precedence to custom tags if they redefine a predefined tag's text
@@ -332,14 +339,6 @@ function getDecorationTypeForTag(
 function clearAllDecorations() {
   activeDecorationTypes.forEach((type) => type.dispose());
   activeDecorationTypes.clear();
-  // Also clear decorations from all visible editors
-  vscode.window.visibleTextEditors.forEach((editor) => {
-    // This needs a way to know which decoration types were applied by this extension
-    // For simplicity, if we re-create all types, we can just clear all.
-    // However, a more robust way is to keep track of applied decorations per editor.
-    // For now, this clear is for the `activeDecorationTypes` map.
-    // The `updateDecorationsForEditor` will clear specific decorations.
-  });
 }
 
 // Define common single-line comment prefixes for more precise matching
@@ -414,11 +413,11 @@ function updateDecorationsForEditor(editor: vscode.TextEditor) {
     // 1. Single-Line Comment Matching
     // This regex looks for common single-line comment markers followed by the specific tag.
     // It's refined to use specific prefixes.
-    const singleLinePrefixRegexStrings = SINGLE_LINE_COMMENT_PREFIXES.map(
-      (p) => p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") // Escape the prefix itself
-    );
+    const singleLineCommentPattern = SINGLE_LINE_COMMENT_PREFIXES.map((p) =>
+      p.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    ).join("|");
     const singleLineTagRegex = new RegExp(
-      `(^\\s*(?:${singleLinePrefixRegexStrings.join("|")})\\s*)(${escapedTag})`,
+      `(^\\s*(?:${singleLineCommentPattern})\\s*)(${escapedTag})`,
       "gm"
     );
 
@@ -516,7 +515,6 @@ function updateCustomTagSnippets(context: vscode.ExtensionContext) {
     // Optionally, clear existing custom snippet files
     clearSnippetFiles(context);
     return;
-    return;
   }
 
   console.log(`Generating snippets for ${mergedTags.length} tags`);
@@ -546,7 +544,7 @@ function generateGeneralSnippets(
   customTags: CustomTag[]
 ): Record<string, Snippet> {
   const snippets: Record<string, Snippet> = {};
-  const config = vscode.workspace.getConfiguration("betterCommentsEnhanced");
+  const config = vscode.workspace.getConfiguration("commentChameleon");
   const globalEmojiSetting = config.get<boolean>("useEmojis", true);
 
   customTags.forEach((tag) => {
@@ -591,7 +589,7 @@ function generatePythonSnippets(
   customTags: CustomTag[]
 ): Record<string, Snippet> {
   const snippets: Record<string, Snippet> = {};
-  const config = vscode.workspace.getConfiguration("betterCommentsEnhanced");
+  const config = vscode.workspace.getConfiguration("commentChameleon");
   const globalEmojiSetting = config.get<boolean>("useEmojis", true);
 
   customTags.forEach((tag) => {
@@ -634,7 +632,7 @@ function generateHtmlSnippets(
   customTags: CustomTag[]
 ): Record<string, Snippet> {
   const snippets: Record<string, Snippet> = {};
-  const config = vscode.workspace.getConfiguration("betterCommentsEnhanced");
+  const config = vscode.workspace.getConfiguration("commentChameleon");
   const globalEmojiSetting = config.get<boolean>("useEmojis", true);
 
   customTags.forEach((tag) => {
@@ -674,7 +672,11 @@ function generateHtmlSnippets(
  * Returns an appropriate emoji for a given tag type
  */
 function getEmojiForTag(tagName: string): string {
-  const normalizedTagName = tagName.toLowerCase().replace(":", "");
+  const normalizedTagName = tagName
+    .toLowerCase()
+    .replace(":", "")
+    .replace(/\s+/g, "_")
+    .trim();
   const emojiMap: Record<string, string> = {
     explanation: "💬",
     todo: "📋",
