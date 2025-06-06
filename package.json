@@ -2,7 +2,7 @@
   "name": "better-comment-tags",
   "displayName": "better-comment-tags",
   "description": "Semantic comment tags with emojis for better code documentation",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "publisher": "KevinAndani",
   "license": "MIT",
   "extensionDependencies": [
@@ -22,6 +22,7 @@
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
+  "icon": "images/icon.png",
   "contributes": {
     "commands": [
       {

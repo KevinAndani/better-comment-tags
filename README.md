@@ -1,3 +1,30 @@
+# ⚠️ This Extension is Deprecated ⚠️
+
+**Thank you for using "Better Comment Tags"!**
+
+This extension (`better-comment-tags`) is no longer under active development and will be unpublished from the VS Code Marketplace in the near future.
+
+## ✨ Introducing "Comment Chameleon" - The Successor ✨
+
+I'm excited to announce its successor, **Comment Chameleon**, which offers a more robust and feature-rich experience for customizing your comment highlighting!
+
+**"Comment Chameleon" provides:**
+
+*   Enhanced performance and reliability.
+*   More flexible configuration options.
+*   Ongoing support and new features.
+
+**➡️ [Install "Comment Chameleon" from the VS Code Marketplace](vscode:extension/KevinAndani.comment-chameleon)**
+
+**We highly recommend migrating to "Comment Chameleon" for the best experience.**
+
+### How to Migrate:
+
+1.  **Install "Comment Chameleon"** using the link above or by searching for "Comment Chameleon" in the VS Code Extensions view.
+2.  Once "Comment Chameleon" is installed and configured to your liking, you can **uninstall "Better Comment Tags"**.
+
+Thank you for your support!
+
 # Better Comment Tags
 
 Enhance your code documentation with semantic comment tags and emojis that make your comments more expressive and easier to find.
